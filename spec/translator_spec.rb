@@ -6,7 +6,7 @@ describe "#load_library" do
 
   it "returns a hash" do
     emoticon_hash = load_library("./lib/emoticons.yml")
-    expect(emoticon_hash.type).to eq(Hash)
+    expect(emoticon_hash.class).to eq(Hash)
   end
 
 end
