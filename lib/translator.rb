@@ -1,4 +1,6 @@
-def load_library(file_path)
+# require modules here
+
+def load_library
   # code goes here
 end
 
