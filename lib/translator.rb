@@ -1,7 +1,9 @@
+require 'yaml'
+
 def load_library(file_path)
-  # code goes here
+  YAML.load_file(file_path)
 end
 
 def translate
-  # code goes here
+  library = load_library("./lib/emoticons.yml")
 end
