@@ -30,7 +30,7 @@ describe "#translate" do
   end
 
   it "returns an apology message if the argument is not a known emoticon" do
-    expect(translate("$#$%{}*")).to eq("Sorry, that emoticons was not found")
+    expect(translate("$#$%{}*")).to eq("Sorry, that emoticon was not found")
   end
   
 end
