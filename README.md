@@ -8,7 +8,9 @@ level: introductory hash iteration
 
 ## Background
 
-You've started to notice that your cool friend, who has been living in Japan for a couple months, has been texting with odd emoticons that you don't recognize, like `＼(◎o◎)／!` and `((d[-_-]b))`. You've decided to be cool like him by texting with these expressive emoticons too.
+Your friend JJ just moved to Japan and loves it. However, sometimes he gets confused because his new friends text him emoticons that he doesn't recognize, like `＼(◎o◎)／!` and `((d[-_-]b))`. 
+
+He asked you to create a method that will translate these emoticons to English. He also asked you to create a method that will convert his English emoticons, like `:)`, into their Japanese equivalents so that he can look cool in texts to his new friends from The Land of the Rising Sun.
 
 ## Objectives
 
@@ -17,7 +19,6 @@ You've started to notice that your cool friend, who has been living in Japan for
 2. Write a method that will take a traditional Western emoticon, like `:)` and translate it to its Japanese version. It will rely on the method above. Refer to the table below for translations.
 
 3. Write a method that takes a Japanese emoticon and returns its meaning in English. This method will also rely on the first method you wrote, the YAML file loader.
-
 
 |Meaning   | English | Japanese    |
 |----------|:-------:|:-----------:|
