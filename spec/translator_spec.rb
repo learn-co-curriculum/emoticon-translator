@@ -11,26 +11,50 @@ describe "#load_library" do
 
 end
 
-describe "#translate" do
+describe "#get_japanese_emoticon" do
 
   it "accepts one argument" do
-    expect { translate(":)") }.to_not raise_error
+    expect { get_japanese_emoticon(":)") }.to_not raise_error
   end
 
   it "returns the Japanese equivalent of an English grinning" do
-    expect(translate("=D")).to eq("(￣ー￣)")
+    expect(get_japanese_emoticon("=D")).to eq("(￣ー￣)")
   end
 
   it "returns the Japanese equivalent of an English happy" do
-    expect(translate(":)")).to eq("(＾ｖ＾)")
+    expect(get_japanese_emoticon(":)")).to eq("(＾ｖ＾)")
   end
 
   it "returns the Japanese equivalent of an English sad" do
-    expect(translate(":'(")).to eq("(Ｔ▽Ｔ)")
+    expect(get_japanese_emoticon(":'(")).to eq("(Ｔ▽Ｔ)")
   end
 
   it "returns an apology message if the argument is not a known emoticon" do
-    expect(translate("$#$%{}*")).to eq("Sorry, that emoticon was not found")
+    expect(get_japanese_emoticon("$#$%{}*")).to eq("Sorry, that emoticon was not found")
+  end
+  
+end
+
+describe "#get_english_meaning" do
+
+  it "accepts one argument" do
+    expect { get_english_meaning("(Ｔ▽Ｔ)") }.to_not raise_error
+  end
+
+  it "returns the Japanese equivalent of an English grinning" do
+    expect(get_english_meaning("(＾ｖ＾)")).to eq("happy")
+  end
+
+  it "returns the Japanese equivalent of an English happy" do
+    expect(get_english_meaning("(￣ー￣)")).to eq("grinning")
+  end
+
+  it "returns the Japanese equivalent of an English sad" do
+    expect(get_english_meaning("(Ｔ▽Ｔ)")).to eq("sad")
+  end
+
+  it "returns an apology message if the argument is not a known emoticon" do
+    expect(get_english_meaning("$#$%{}*")).to eq("Sorry, that emoticon was not found")
   end
   
 end
