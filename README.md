@@ -12,7 +12,12 @@ You've started to notice that your cool friend, who has been living in Japan for
 
 ## Objectives
 
-Write a method that will take a traditional Western emoticon, like `:)` and translate it to its Japanese version. Refer to the table below for translations.
+1. Write a method that loads the `emoticons.yml` file.
+
+2. Write a method that will take a traditional Western emoticon, like `:)` and translate it to its Japanese version. It will rely on the method above. Refer to the table below for translations.
+
+3. Write a method that takes a Japanese emoticon and returns its meaning in English. This method will also rely on the first method you wrote, the YAML file loader.
+
 
 |Meaning   | English | Japanese    |
 |----------|:-------:|:-----------:|
@@ -29,6 +34,8 @@ Write a method that will take a traditional Western emoticon, like `:)` and tran
 |sad       |:'(      |(Ｔ▽Ｔ)       |
 |surprised |:o       | o_O         |
 |wink      |;)       |(^_-)        |
+
+
 
 ## Instructions
 
