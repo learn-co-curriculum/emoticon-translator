@@ -1,5 +1,5 @@
 ---
-tags: strings, hashes, yaml, iteration
+tags: strings, hashes, yaml, iteration, bonus
 languages: ruby
 resources: 3
 level: introductory hash iteration
