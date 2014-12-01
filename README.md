@@ -11,7 +11,7 @@ level: introductory hash iteration
 
 * [Background](#background)
 * [Objectives](#objectives)
-* [What is YAML?](#what-is-yaml?)
+* [What is YAML?](#what-is-yaml)
 * [Instructions](#instructions)
 * [Resources](#resources)
 
