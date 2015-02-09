@@ -54,7 +54,7 @@ describe "#get_japanese_emoticon" do
   it "calls on #load_library and gives it the argument of the file path" do
     emoticon_hash = load_library("./lib/emoticons.yml")
 
-    expect(self).to recieve(:load_library).with("./lib/emoticons.yml").and_return(emoticon_hash)
+    expect(self).to receive(:load_library).with("./lib/emoticons.yml").and_return(emoticon_hash)
     answer = get_japanese_emoticon("./lib/emoticons.yml", "=D")
   end
 
@@ -85,7 +85,7 @@ describe "#get_english_meaning" do
   it "calls on #load_library and gives it the argument of the file path" do
     emoticon_hash = load_library("./lib/emoticons.yml")
 
-    expect(self).to recieve(:load_library).with("./lib/emoticons.yml").and_return(emoticon_hash)
+    expect(self).to receive(:load_library).with("./lib/emoticons.yml").and_return(emoticon_hash)
     answer = get_english_meaning("./lib/emoticons.yml", "=D")
   end
 
