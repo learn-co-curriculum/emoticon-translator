@@ -23,22 +23,35 @@ describe "#load_library" do
 
     it "the keys inside the 'get_meaning' hash are the Japanese emoticons" do
       emoticons = ["☜(⌒▽⌒)☞", "(ΘεΘ;)", "(￣ー￣)", "o_O", "(^_-)"]
-      emoticons.each { |japanese_emoticon| expect(result['get_meaning'].keys).to include(japanese_emoticon) }
+      emoticons.each do |japanese_emoticon| 
+        expect(result['get_meaning'].keys).to include(japanese_emoticon)
+      end
     end
 
     it "the emoticon keys inside the 'get_meaning' hash point to their meanings" do
-      emoticons = {"☜(⌒▽⌒)☞" => "angel", "(ΘεΘ;)" => "bored", "o_O" => "surprised", "(^_-)" => "wink"}
-      emoticons.each { |japanese_emoticon,meaning| expect(result['get_meaning'][japanese_emoticon]).to eq(meaning) }
+      emoticons = {
+        "☜(⌒▽⌒)☞" => "angel",
+        "(ΘεΘ;)" => "bored",
+        "o_O" => "surprised",
+        "(^_-)" => "wink"
+      }
+      emoticons.each do |japanese_emoticon,meaning| 
+        expect(result['get_meaning'][japanese_emoticon]).to eq(meaning)
+      end
     end
 
     it "the keys inside the 'get_emoticon' hash are the English emoticons" do
       emoticons = ["O:)", ":'(", ";)", ":$"]
-      emoticons.each { |english_emoticon| expect(result['get_emoticon'].keys).to include(english_emoticon) }
+      emoticons.each do |english_emoticon| 
+        expect(result['get_emoticon'].keys).to include(english_emoticon)
+      end
     end
 
     it "the emoticon keys inside the 'get_emoticon' hash point to their Japanese equivalents" do
       emoticons = {"O:)" => "☜(⌒▽⌒)☞", ":'(" => "(Ｔ▽Ｔ)", ";)" => "(^_-)"}
-      emoticons.each { |english_emoticon,japanese_emoticon| expect(result['get_emoticon'][english_emoticon]).to eq(japanese_emoticon) }
+      emoticons.each do |english_emoticon,japanese_emoticon| 
+        expect(result['get_emoticon'][english_emoticon]).to eq(japanese_emoticon)
+      end
     end
 
   end
@@ -54,7 +67,8 @@ describe "#get_japanese_emoticon" do
   it "calls on #load_library and gives it the argument of the file path" do
     emoticon_hash = load_library("./lib/emoticons.yml")
 
-    expect(self).to receive(:load_library).with("./lib/emoticons.yml").and_return(emoticon_hash)
+    file_path = "./lib/emoticons.yml"
+    expect(self).to receive(:load_library).with(file_path).and_return(emoticon_hash)
     answer = get_japanese_emoticon("./lib/emoticons.yml", "=D")
   end
 
@@ -71,7 +85,8 @@ describe "#get_japanese_emoticon" do
   end
 
   it "returns an apology message if the argument is not a known emoticon" do
-    expect(get_japanese_emoticon("./lib/emoticons.yml", "$#$%{}*")).to eq("Sorry, that emoticon was not found")
+    sorry_message = "Sorry, that emoticon was not found"
+    expect(get_japanese_emoticon("./lib/emoticons.yml", "$#$%{}*")).to eq(sorry_message)
   end
 
 end
@@ -85,7 +100,8 @@ describe "#get_english_meaning" do
   it "calls on #load_library and gives it the argument of the file path" do
     emoticon_hash = load_library("./lib/emoticons.yml")
 
-    expect(self).to receive(:load_library).with("./lib/emoticons.yml").and_return(emoticon_hash)
+    file_path = "./lib/emoticons.yml"
+    expect(self).to receive(:load_library).with(file_path).and_return(emoticon_hash)
     answer = get_english_meaning("./lib/emoticons.yml", "=D")
   end
 
@@ -102,7 +118,8 @@ describe "#get_english_meaning" do
   end
 
   it "returns an apology message if the argument is not a known emoticon" do
-    expect(get_english_meaning("./lib/emoticons.yml", "$#$%{}*")).to eq("Sorry, that emoticon was not found")
+    sorry_message = "Sorry, that emoticon was not found"
+    expect(get_english_meaning("./lib/emoticons.yml", "$#$%{}*")).to eq(sorry_message)
   end
 
 end
