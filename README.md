@@ -1,9 +1,4 @@
----
-tags: strings, hashes, yaml, iteration, bonus
-languages: ruby
-resources: 5
-level: introductory hash iteration
----
+
 
 # Emoticon Translator
 
