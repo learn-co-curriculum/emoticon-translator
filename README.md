@@ -112,4 +112,4 @@ This is a test-driven lab so just get those specs to pass! The first step will b
 * [Stack Overflow](http://stackoverflow.com/) - [Loading a YAML File](http://stackoverflow.com/a/3877355)
 * [Wikipedia](http://en.wikipedia.org/) - [List of Emoticons](http://en.wikipedia.org/wiki/List_of_emoticons)
 
-<a href='https://learn.co/lessons/emoticon-translator' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/emoticon-translator' title='Emoticon Translator'>Emoticon Translator</a> on Learn.co and start learning to code for free.</p>
